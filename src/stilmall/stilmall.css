@@ -1,0 +1,578 @@
+/* Grunden som syns på alla sidor */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header{
+    background-color: #d78e21;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logotyp img{
+    height: 60px;
+}
+
+.meny{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 3rem;
+}
+
+.meny a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.meny a.active{
+    border-bottom: 3px solid #0056b3;
+    padding-bottom: 5px;
+}
+
+main{
+    padding: 0;
+}
+
+footer{
+    background-color: #d78e21;
+    padding: 1rem;
+    color: black;
+}
+
+.kontakt h3{
+    margin-bottom: 1rem;
+}
+
+.kontakt-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    gap: 1rem;
+}
+
+/* Startsidan */
+
+.karusell{
+   display: block;
+   min-height: 280px;
+   height: auto;
+   overflow: hidden;
+   background-color: white;
+   position: relative;
+   width: 100%;
+}
+
+.karusell .slide{
+   display: flex;
+   height: 100%;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 0 2rem;
+}
+
+.karusell .slide a{
+    display: inline-block;
+    background-color: #d78e21;
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.karusell .slide a:hover{
+    background-color: #a36b17;
+}
+
+.karusell button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #d78e21;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.karusell button:hover {
+    background: #a36b17;
+}
+
+.cta-sektion{
+    background-color: #0056b3;
+    padding: 3rem 1rem;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+    clear: both;
+}
+
+.cta{
+    display: grid;
+    grid-template-columns: 150px 250px;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.cta-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.cta-box:hover{
+    background-color: #d78e21;
+}
+
+.information{
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+    margin-bottom: 4rem;
+}
+
+.information img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.text{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    align-content: center;
+    padding: 2rem;
+}
+
+.text h1{
+    margin-bottom: 0;
+}
+
+.text p{
+    margin-top: 0;
+}
+
+/* Meny-sidan */
+
+.rubrik{
+    display: grid;
+    justify-items: center;         
+    padding: 1rem 0;               
+    border-top: 2px solid #d78e21;
+    border-bottom: 2px solid #d78e21;
+    margin: 2rem 0 1rem 0;         
+}
+
+.rubrik span{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.menyval{
+    display: flex;
+    justify-content: center;         
+    margin-bottom: 1rem;
+}
+
+.menyval ul{
+    display: grid;
+    grid-auto-flow: column;        
+    gap: 2rem;
+    list-style: none;
+    padding: 0.8rem 1rem;
+    margin: 0;
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+}
+
+.menyval a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.menyval a.active{
+    color: orange;
+    border-bottom: 2px solid orange;
+}
+
+.vald-meny{
+    display: grid;
+    justify-items: center;
+    padding: 1rem 0;
+    border-top: 2px solid #d78e21;
+    border-bottom: 2px solid #d78e21;
+    margin-bottom: 2rem;
+}
+
+.vald-meny span{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.meny-rätter{
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    padding: 0 1rem;
+}
+
+.meny-rätter h2{
+    margin-bottom: 0.5rem;
+}
+
+.meny-rätter p{
+    margin: 0;
+}
+
+.meny-tabell{
+    width: 100%;
+    border-collapse: collapse;   
+    margin-top: 1rem;
+}
+
+.meny-tabell th,
+.meny-tabell td{
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.meny-tabell th{
+    font-weight: bold;
+    background-color: #d78e21;
+}
+
+.meny-tabell td{
+    border-bottom: 1px solid #ddd;
+}
+
+.meny-tabell td:last-child,
+.meny-tabell th:last-child{
+    text-align: right;
+}
+/* Dagens lunch*/
+
+.rubrik .info-text{
+    margin: 0.5rem 0 0 35rem;       
+    font-style: italic;
+    color: black;
+    text-align: left;            
+    max-width: 500px;            
+    justify-self: start;              
+}
+
+.pris-info{
+    text-align: center; 
+    margin-top: 1rem;   
+    font-size: 1.2rem;  
+}
+
+/* Kontakt */
+
+.kontakt-rubrik{
+    text-align: center;
+    font-size: 2rem;
+    margin: 3rem 0;
+}
+
+.kontakt-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.kontakt-information{
+    display: grid;
+    gap: 2rem;
+}
+
+.kontakt-box{
+    border: 2px solid #d78e21;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.kontakt-box .ikon{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.karta iframe{
+    width: 100%;
+    height: 50vh;
+    min-height: 500px;
+    border-radius: 8px;
+    border: 0;
+}
+
+.karta{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.karta-knapp{
+    display: inline-block;
+    text-align: center;
+    padding: 0.8rem;
+    background-color: #d78e21;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.karta-knapp:hover{
+    background-color: #a36b17;
+}
+
+/* Om oss */
+
+.om-oss-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    align-items: center;  
+}
+
+.om-oss-text h1{
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.om-oss-text p{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.om-oss-bild img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Extra */
+
+.extra-layout{
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+}
+
+.media video{
+    width: 80%;
+    height: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.formulär form{
+    display: grid;
+    gap: 1rem;
+}
+
+.formulär label{
+    font-weight: bold;
+}
+
+.formulär input,
+.formulär textarea{
+    padding: 0.5rem;
+    border: 2px solid #d78e21;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formulär button{
+    background-color: #d78e21;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulär button:hover{
+    background-color: #b8741a;
+}
+
+.knapp{
+    display: grid;
+    justify-content: center;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.knapp button{
+    padding: 20px 40px;
+    font-size: 24px;
+    border-radius: 10px;
+    border: none;
+    background-color: #d78e21;
+    cursor: pointer;
+}
+
+.knapp button:hover{
+    background-color: #a36b17;
+}
+
+.extra-nav {
+    background-color: #d78e21; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative; 
+    height: 80px;
+}
+
+#extra-submeny {
+    display: none;       
+    position: absolute;  
+    top: 100%;           
+    left: 0;
+    right: 0;          
+    background-color: #a36b17; 
+    margin: 0;
+    padding: 15px;
+    list-style: none;
+    border-bottom: 2px solid #d78e21;
+    
+    display: flex; 
+    justify-content: center; 
+    gap: 20px;               
+}
+
+#toggle-menu {
+    background: none;    
+    border: none;        
+    padding: 0;          
+    cursor: pointer;     
+    outline: none;      
+    display: flex;
+    flex-direction: column;
+}
+
+#toggle-menu span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.fade-sektion{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    margin-top: 50px;
+    gap: 30px;             
+}
+
+.textblock{
+    display: flex;          
+    justify-content: center; 
+    gap: 30px;              
+}
+
+.text-box{
+    width: 150px;
+    height: 150px;
+    background-color: #d78e21;
+    border-left: 5px solid #d78e21;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#start-fade {
+    background-color: #d78e21;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-bottom: 50px;
+}
+
+#start-fade:hover {
+    background-color: #a36b17;
+}
+
+/* Förbättrad utskriftslayout för startsidan */
+@media print{
+    .cta-sektion{
+        display: none; 
+    }
+    body {
+        background: white; 
+        color: black;  
+    }
+}
